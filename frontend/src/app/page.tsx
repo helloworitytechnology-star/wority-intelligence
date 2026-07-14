@@ -540,7 +540,7 @@ export default function Home() {
                   <p className="text-[10px] text-zinc-500 font-mono">Volume breakdown of processed requirement categories</p>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3">
-                  {Object.entries(kpis.classifications_breakdown || {}).map(([category, count]) => (
+                  {Object.entries(kpis.classifications_breakdown || {}).map(([category, count]: [string, any]) => (
                     <div key={category} className="p-3 bg-zinc-900/20 border border-zinc-900 hover:border-zinc-800 rounded-xl flex items-center justify-between hover:bg-zinc-900/40 transition-all duration-200">
                       <span className="text-[10px] font-mono text-zinc-400 truncate" title={category}>{category}</span>
                       <span className="text-xs font-bold text-emerald-400 font-mono bg-emerald-500/5 px-2 py-0.5 rounded border border-emerald-500/10 ml-2">{count}</span>
